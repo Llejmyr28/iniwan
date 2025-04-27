@@ -1,0 +1,212 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body and container */
+body {
+    height: 100vh;
+    background: url('images/491508012_997745302507518_2177800774746718799_n.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background: rgba(255, 255, 255, 0.1); /* translucent base */
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px); /* heavy blur */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Left Panel */
+.left-panel {
+    background: rgba(168, 224, 99, 0.3);
+    color: white;
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-panel h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Adds the shadow effect */
+}
+
+.left-panel p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Adds shadow for the paragraph */
+}
+
+.nutrition-img {
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-container {
+    width: 100%;
+}
+
+/* Form Elements */
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #56ab2f;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 2px solid rgba(168, 224, 99, 0.5);
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #56ab2f;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.input-group label {
+    display: none;
+}
+
+/* Options (Remember Me + Forgot Password) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.options a {
+    color: #56ab2f;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #56ab2f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #4caf50;
+}
+
+/* Sign Up / Sign In Links */
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.signup-link button {
+    background: none;
+    border: none;
+    color: #56ab2f;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.signup-link button:hover {
+    color: #4caf50;
+}
+
+/* MessageDiv (for error/success messages) */
+.messageDiv {
+    background: rgba(255, 224, 178, 0.8);
+    color: #e65100;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Frosted glass utility class */
+.CLASS {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .nutrition-img {
+        width: 60%;
+    }
+}
